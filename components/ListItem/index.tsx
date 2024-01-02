@@ -1,6 +1,11 @@
 import { FC } from "react";
 import { Image, Text } from "react-native";
 import styled from "styled-components/native";
+interface Props {
+  imageUrl: string;
+  title: string;
+  author: string;
+}
 
 const Box = styled.View`
   width: 100%;
@@ -19,19 +24,15 @@ const RightBox = styled.View`
   background-color: white;
 `;
 
-export const ListItem: FC = () => {
+export const ListItem: FC<Props> = ({ imageUrl, title, author }) => {
   return (
     <Box>
       <LeftBox>
-        <Image
-          style={{ width: 100, height: 100 }}
-          source={{ uri: "https://picsum.photos/seed/picsum/200/300" }}
-        />
+        <Image style={{ width: 100, height: 100 }} source={{ uri: imageUrl }} />
       </LeftBox>
       <RightBox>
-        <Text>
-          これはテストで文章をとりあえず準備しているだけなので、何の内容もないものです！
-        </Text>
+        <Text>{title}</Text>
+        <Text>{author}</Text>
       </RightBox>
     </Box>
   );

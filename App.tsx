@@ -12,9 +12,22 @@ const Container = styled.View`
 export default function App() {
   return (
     <Container>
-      <ListItem />
-      <ListItem />
-      <ListItem />
+      <ListItem
+        imageUrl="https://picsum.photos/seed/picsum/200/300"
+        title="1つ目のタイトル"
+        author="yunosuke"
+      />
+      <ListItem
+        imageUrl="https://picsum.photos/200/300?grayscale
+        "
+        title="2つ目のタイトル"
+        author="yuki"
+      />
+      <ListItem
+        imageUrl="https://picsum.photos/200/300/?blur"
+        title="3つ目のタイトル"
+        author="yano"
+      />
       <StatusBar style="auto" />
     </Container>
   );
