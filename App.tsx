@@ -13,6 +13,8 @@ export default function App() {
   return (
     <Container>
       <ListItem />
+      <ListItem />
+      <ListItem />
       <StatusBar style="auto" />
     </Container>
   );
